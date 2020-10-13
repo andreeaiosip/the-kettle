@@ -10,7 +10,6 @@
 		<div class="navbar-nav">
 			<a href="#" class="nav-item nav-linkactive">HOME</a>
 			<a href="#" class="nav-item nav-link">ABOUT</a>			
-			
 			<a href="#" class="nav-item nav-link">COFFEE</a>
 			<a href="#" class="nav-item nav-link">TEA</a>
 			<a href="#" class="nav-item nav-link">CONTACT</a>
@@ -35,10 +34,17 @@
             <a href="#" class="nav-item nav-link">
                 <div class="nav-item dropdown">
                     <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">ACCOUNT</a>
-                    <div class="dropdown-menu">					
-                        <a href="#" class="dropdown-item">Login</a>
-                        <a href="#" class="dropdown-item">Register</a>
-                      
+                    <div class="dropdown-menu">	
+                        {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                                <a href="#" class="dropdown-item">Product Management</a>
+                            {% endif %}
+                                <a href="#" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        {% endif %}
                     </div>
                 </div>
             </a>
