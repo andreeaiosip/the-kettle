@@ -19,6 +19,7 @@
     {% endblock %}
 
     {% block extra_css %}
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}  
 
     {% block corejs %}
@@ -28,14 +29,21 @@
     {% endblock %}
   
     {% block extra_js %}
+     <script src="{% static 'js/scripts.js' %}"></script>
     {% endblock %}  
     <title>The Kettle {% block extra_title %}{% endblock %}  </title>
   </head>
   <body>
-  <header class="container-fluid fixed-top"></header>
+ {% if navbar != False %}
+    {% include 'components/navbar.html' %}
+    {% endif %}
+          <header>
+    </header>
+
 
     {% if messages %}
-  <div class="message-container"></div>
+    <div class="message-container">
+    </div>
     {% endif %}
 
 <!-- Page header-->
