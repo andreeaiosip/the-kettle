@@ -24,3 +24,26 @@
 - Buy coffee, tea and brewing products online.
 - View the details of coffee and tea and where the ingredients are coming from.
 - Purchase the products in an easy and seamless way.
+
+### User Stories
+
+####  Visitor
+
+- As a user, I want to access the website from any device.
+- As a user, I want to easily navigate between the pages.
+- As a user, I want to be able to search for a product.
+- As a user, I want to be able to view the details of a product.
+- As a user, I want to be able to buy products.
+- As a user, I want to be able to change the quantity of products I want to purchase.
+- As a user, I want to sign up and create an account.
+- As a user, I want to be able to view the products from only one category
+- As a user, I want to be able to see a history of all my orders.
+
+ 
+
+#### **Admin**
+
+- As administrator, I want to be able to log in into the backend of the site.
+- As administrator, I want to be able to add, edit and delete products
+- As administrator, I would like to be able to see all the orders that were placed on the site.
+
