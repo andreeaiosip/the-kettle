@@ -4,3 +4,99 @@ html, body {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
+
+ .row, .container, .container-fluid {
+     margin:0;
+     padding:0;
+}
+
+.form-control {
+	box-shadow: none;
+	border-radius: 4px;
+}
+.navbar {
+	background: #fff;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-bottom: 1px solid #dfe3e8;
+	border-radius: 0;
+}
+.navbar .navbar-brand {
+	padding-left: 0;
+	font-size: 20px;
+	padding-right: 50px;
+}
+.navbar .navbar-brand b {
+	font-weight: bold;
+	color: rgb(172, 84, 13);		
+}
+.navbar .navbar-nav > a {
+	margin: 0 0.25rem;
+}
+.navbar a, .navbar a:active {
+	color: #888;
+	font-size: 15px;
+	background: transparent;
+}
+.navbar a:hover, .navbar a:focus {
+	color:#c77838;
+}
+.navbar .navbar-nav.show > a, .navbar .navbar-nav > a.active {
+    color: #c77838 !important;
+    background: transparent !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(172, 84, 13)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.search-box {
+	width: 100%;
+	position: relative;
+}	
+.search-box input {		
+	border-color: #dfe3e8;        
+	box-shadow: none
+}
+.nav-link {
+    padding: 0;
+}
+.search-box input, .search-box .btn {
+	min-height: 38px;
+	border-radius: 2px;
+}
+.input-group-append .btn, .input-group-append .btn:active {
+	border-color: #c77838;
+	background: #c77838 !important;
+}
+.navbar .nav-item i {
+	font-size: 18px;
+	line-height: 16px;
+}
+.navbar .search-dropdown .dropdown-toggle::after {
+	display: none;
+}
+.navbar .dropdown-menu {
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu a {
+	padding: 6px 20px;
+}
+.navbar .search-dropdown .dropdown-menu {
+	width: 400px;
+	padding: 20px;
+	left: auto;
+	right: 0;
+	font-size: 14px;
+}
+@media (max-width: 768px){
+	.navbar .navbar-right .dropdown-menu {
+		width: 100%;
+		background: transparent;
+		padding: 10px 20px;
+	}
+	.navbar .input-group {
+		width: 100%;
+	}
+}
