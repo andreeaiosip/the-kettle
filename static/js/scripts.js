@@ -11,3 +11,6 @@ $(document).ready(function(){
 		toogleBtn.first().removeClass("d-none");
 	});
 });
+jQuery('body').on('click', function() {
+  // code to close hamburger
+});
