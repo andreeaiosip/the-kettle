@@ -48,7 +48,21 @@
                     </div>
                 </div>
             </a>
-			<a href="#" class="nav-item nav-link"><i class="fa fa-shopping-bag"></i></a>
+            
+			<a href="#" class="nav-item nav-link"><i class="fa fa-shopping-bag"></i>
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                            <div class="text-center">
+                                
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        €{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        €0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a></a>
+            
         </div>
 	</div>
 </nav>
