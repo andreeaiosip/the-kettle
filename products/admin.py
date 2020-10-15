@@ -18,7 +18,7 @@ class TeaAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'ingredients',
-        'teabags',
+        'tea_bags',
         'image',
         'price',
     )
