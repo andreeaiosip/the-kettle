@@ -2,6 +2,7 @@
 
 html, body {
     font-family: 'Open Sans', sans-serif;
+    height: 100%;
   
 }
 
@@ -28,18 +29,19 @@ html, body {
 }
 .navbar .navbar-brand b {
 	font-weight: bold;
-	color: rgb(172, 84, 13);		
+	color: #5d5967;		
 }
 .navbar .navbar-nav > a {
 	margin: 0 0.25rem;
 }
 .navbar a, .navbar a:active {
-	color: #888;
+	color: #66677b;
 	font-size: 15px;
+    font-weight: bold;
 	background: transparent;
 }
 .navbar a:hover, .navbar a:focus {
-	color:#c77838;
+	color:#c48968;
 }
 .navbar .navbar-nav.show > a, .navbar .navbar-nav > a.active {
     color: #c77838 !important;
@@ -89,6 +91,31 @@ html, body {
 	left: auto;
 	right: 0;
 	font-size: 14px;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.692)), url("../img/bg1.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 @media (max-width: 768px){
 	.navbar .navbar-right .dropdown-menu {
