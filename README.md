@@ -1,4 +1,4 @@
-**The Kettle** e-commerce site is built for a fictional coffee and tea wholesale start-up that want to promote their business and sell their products online around the world. The products can be bought in bigger bathes at a lower cost than if you were to buy from a brick and mortar shop. The site is created to be intuitive and easy to navigate to make the user’s experience a pleasurable one, so they will come back to purchase again from the shop.
+**The Kettle** e-commerce site is built for a fictional coffee and tea suppliers start-up that want to promote their business and sell their quality products online around the world. Their products are ethically sourced following a strict set of rules that ensure products improve the living conditions of small farmers and are produced with sustainable practices.  This means buying quality products at a lower cost than if you were to buy from a brick and mortar shop. The site is created to be intuitive and easy to navigate to make the user’s experience a pleasurable one, so they will come back to purchase again from the shop.
 
 ### Goals
 
@@ -7,7 +7,7 @@
 - Promote their business online.
 - Attract new customers and convert them to returning customers.
 - Sell products at a lower price than the brick and mortar shops.
-- Ship the products around the world to reach a wide audience, from individuals to big companies.
+- Ship the products around the world to reach a wide audience.
 
 
 
