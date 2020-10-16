@@ -92,6 +92,11 @@ html, body {
 	right: 0;
 	font-size: 14px;
 }
+   .coffee-container { 
+    margin: auto;
+    margin-top: 300px;
+    background-color: rgb(226, 142, 45);
+    }
 
 /* The hero image */
 .hero-image {
