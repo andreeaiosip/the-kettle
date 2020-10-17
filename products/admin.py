@@ -7,7 +7,6 @@ class CoffeeAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'strength',
-        'image',
         'price',
     )
 
@@ -17,9 +16,8 @@ class CoffeeAdmin(admin.ModelAdmin):
 class TeaAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'ingredients',
         'tea_bags',
-        'image',
+        'ingredients',
         'price',
     )
     ordering = ('price',)
