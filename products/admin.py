@@ -1,27 +1,15 @@
 from django.contrib import admin
-from .models import Coffee, Tea
+from .models import Product
 
 
 # Register your models here.
-class CoffeeAdmin(admin.ModelAdmin):
+class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'strength',
         'price',
     )
 
-    ordering = ('strength',)
+    ordering = ('name',)
 
 
-class TeaAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'tea_bags',
-        'ingredients',
-        'price',
-    )
-    ordering = ('price',)
-
-
-admin.site.register(Coffee, CoffeeAdmin)
-admin.site.register(Tea, TeaAdmin)
+admin.site.register(Product, ProductAdmin)

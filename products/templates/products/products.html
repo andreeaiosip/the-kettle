@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font">Coffee</h2>
+                <h2 class="logo-font">products</h2>
                 <hr class="w-50 mb-1">
             </div>
         </div>
@@ -15,23 +15,23 @@
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
-                    {% for coffee in coffee %}
+                    {% for products in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                {% if coffee.image %}
+                                {% if products.image %}
                                 <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ coffee.image.url }}" alt="{{ coffee.name }}">
+                                    <img class="card-img-top img-fluid" src="{{ products.image.url }}" alt="{{ products.name }}">
                                 </a>
                                 {% else %}
                                 <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ coffee.name }}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ products.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ coffee.name }}</p>
-                                    <p class="mb-0">{{ coffee.description}}</p>
+                                    <p class="mb-0">{{ products.name }}</p>
+                                    <p class="mb-0">{{ products.description}}</p>
                                     <br>
-                                    <p class="mb-0">€{{ coffee.price }}</p>
+                                    <p class="mb-0">€{{ products.price }}</p>
                                 </div>
                                 
                             </div>
