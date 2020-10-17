@@ -1,16 +1,16 @@
 from django.shortcuts import render
-from .models import Tea, Coffee
+from .models import Product
 
 # Create your views here.
 
 
-def all_coffee(request):
+def all_products(request):
 
-    coffee = Coffee.objects.all()
+    products = Product.objects.all()
 
     context = {
-        'coffee': coffee,
+        'products': products,
     }
 
-    return render(request, 'products/coffee.html', context)
-
+    return render(request, 'products/products.html', context)
+    
