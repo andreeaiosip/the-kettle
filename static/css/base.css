@@ -122,6 +122,12 @@ html, body {
   transform: translate(-50%, -50%);
   color: white;
 }
+
+.basket-container {
+    padding-top: 100px;
+    margin: 0 auto;
+}
+
 @media (max-width: 768px){
 	.navbar .navbar-right .dropdown-menu {
 		width: 100%;
