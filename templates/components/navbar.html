@@ -10,8 +10,8 @@
 		<div class="navbar-nav">
 			<a href="{% url 'home' %}" class="nav-item nav-link active">HOME</a>
 			<a href="{% url 'products' %}" class="nav-item nav-link">ALL PRODUCTS</a>			
-			<a href="#" class="nav-item nav-link">COFFEE</a>
-			<a href="#" class="nav-item nav-link">TEA</a>
+			<a href="{% url 'products' %}?category=coffee" class="nav-item nav-link">COFFEE</a>
+			<a href="{% url 'products' %}?category=tea" class="nav-item nav-link">TEA</a>
 			<a href="#" class="nav-item nav-link">CONTACT</a>
         </div>		
 		<div class="navbar-nav ml-auto">			
@@ -24,7 +24,7 @@
                             <div class="input-group search-box">								
                                 <input type="text" id="search" name="q" class="form-control" placeholder="Search here...">
 								<div class="input-group-append">
-									<button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+									<button  class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
 								</div>
                             </div>
                         </form>                        
