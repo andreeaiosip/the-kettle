@@ -8,7 +8,7 @@
 	</button>
 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 		<div class="navbar-nav">
-			<a href="{% url 'home' %}" class="nav-item nav-link active">HOME</a>
+			<a href="{% url 'home' %}" class="nav-item nav-link">HOME</a>
 			<a href="{% url 'products' %}" class="nav-item nav-link">ALL PRODUCTS</a>			
 			<a href="{% url 'products' %}?category=coffee" class="nav-item nav-link">COFFEE</a>
 			<a href="{% url 'products' %}?category=tea" class="nav-item nav-link">TEA</a>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </a>
-            
+            <div>
 			<a href="#" class="nav-item nav-link"><i class="fa fa-shopping-bag"></i>
                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                             <div class="text-center">
@@ -61,8 +61,9 @@
                                     {% endif %}
                                 </p>
                             </div>
-                        </a></a>
-            
+                        </a>
+                        </a>
+            </div>
         </div>
 	</div>
 </nav>
