@@ -3,16 +3,20 @@ from .models import Product, Category
 
 
 # Register your models here.
+
+# Product Model
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
+        'category',
         'name',
         'price',
     )
 
-    ordering = ('name',)
+    ordering = ('category',)
 
 
-# Category model
+# Category Model
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
