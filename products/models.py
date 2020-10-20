@@ -26,7 +26,36 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=20)
-    friendly_name = models.CharField(max_length=20, null=True, blank=True)
+    friendly_name = models.CharField(max_length=20, null=True, blank=False)
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
+
+# Ingredient model
+
+class Ingredient(models.Model):
+
+    name = models.CharField(max_length=20)
+    friendly_name = models.CharField(max_length=20, null=True, blank=False)
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
+
+
+# Flovour model
+
+class Flavour(models.Model):
+
+    name = models.CharField(max_length=20)
+    friendly_name = models.CharField(max_length=20, null=True, blank=False)
 
     def __str__(self):
         return self.name
