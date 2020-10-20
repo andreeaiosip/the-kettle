@@ -27,13 +27,10 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=20)
-    friendly_name = models.CharField(max_length=20, null=True, blank=False)
 
     def __str__(self):
         return self.name
 
-    def get_friendly_name(self):
-        return self.friendly_name
 
 
 # Flavour model
@@ -41,11 +38,9 @@ class Category(models.Model):
 class Flavour(models.Model):
 
     name = models.CharField(max_length=20)
-    friendly_name = models.CharField(max_length=20, null=True, blank=False)
 
     def __str__(self):
         return self.name
 
-    def get_friendly_name(self):
-        return self.friendly_name
+
 
