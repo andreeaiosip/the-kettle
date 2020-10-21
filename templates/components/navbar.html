@@ -2,7 +2,7 @@
 <!-- Navbar inspiration from https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=navbar-with-search-box-in-dropdown -->
 
 <nav class="navbar navbar-expand-lg">
-	<a href="#" class="navbar-brand">The<b>Kettle</b></a>  		
+	<a href="{% url 'home' %}" class="navbar-brand">The<b>Kettle</b></a>  		
 	<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 		<span class="navbar-toggler-icon"></span>
 	</button>
@@ -49,20 +49,19 @@
                 </div>
             </a>
             <div>
-			<a href="#" class="nav-item nav-link"><i class="fa fa-shopping-bag"></i>
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                            <div class="text-center">
-                                
+		<a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'basket' %}">
+                          
+                                <i class="fa fa-shopping-bag"></i>
                                 <p class="my-0">
-                                    {% if grand_total %}
-                                        €{{ grand_total|floatformat:2 }}
+                                    {% if total %}
+                                        €{{ total|floatformat:2 }}
                                     {% else %}
                                         €0.00
                                     {% endif %}
                                 </p>
-                            </div>
+                          
                         </a>
-                        </a>
+                      
             </div>
         </div>
 	</div>

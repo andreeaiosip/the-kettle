@@ -1,0 +1,1 @@
+[{"pk":1,"model":"products.flavour","fields":{"name":"grainy","friendly_name":"Grainy"}},{"pk":2,"model":"products.flavour","fields":{"name":"earthy","friendly_name":"Earthy"}},{"pk":3,"model":"products.flavour","fields":{"name":"cinnamon","friendly_name":"Cinnamon"}},{"pk":4,"model":"products.flavour","fields":{"name":"cocoa","friendly_name":"Cocoa"}}]
