@@ -1,1 +1,1 @@
-web: gunicorn django_deployment.wsgi:application
+web: gunicorn the_kettle.wsgi:application
