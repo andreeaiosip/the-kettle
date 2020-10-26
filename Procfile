@@ -1,1 +1,1 @@
-web gunicorn the-kettle-shop:app
+web: gunicorn the-kettle-shop.wsgi:app
