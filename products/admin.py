@@ -9,6 +9,7 @@ from .models import Product, Category, Flavour
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'category',
+        'flavour',
         'name',
         'price',
     )
@@ -27,9 +28,7 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-
 # Flavour Model
-
 
 class FlavourAdmin(admin.ModelAdmin):
     list_display = (
@@ -38,6 +37,8 @@ class FlavourAdmin(admin.ModelAdmin):
 
     ordering = ('name',
     )
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Flavour, FlavourAdmin)
