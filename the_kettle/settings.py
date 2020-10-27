@@ -11,10 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os
-
 if os.path.exists('env.py'):
     import env
-
 import dj_database_url
 from pathlib import Path
 
@@ -27,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'i^x58*+-t576qqt7s-r5mi7@@adi88zqy_!2=)u19ly*wfm2eb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['the-kettle-shop.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -85,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-# Code from Django documentation
+ # Code from Django documentation
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
@@ -119,8 +117,8 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR / 'db.sqlite3'),
-        }
     }
+}
 
 
 # Password validation
