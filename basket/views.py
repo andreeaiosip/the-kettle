@@ -38,18 +38,14 @@ def update_basket(request, item_id):
     return redirect(reverse('basket'))
 
 
+def delete_from_basket(request, item_id):
+    """ Delete items from the basket. """
+    try:
+        basket = request.session.get('basket', {})
+        basket.pop(item_id)
 
-# def delete_from_basket(request, item_id):
-#     """ Delete items from the basket. """
-  
-#     print(request.POST)
-#     quantity = int(request.POST.get('quantity'))
-#     basket = request.session.get('basket', {})
+        request.session['basket'] = basket
 
-#     if quantity > 0:
-#         basket[id] = quantity
-#     else:
-#         basket.pop(id)
-
-#     request.session['basket'] = basket
-#     return redirect(reverse('view_basket'))
+        return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(status=500)
