@@ -2,7 +2,7 @@
 
 
 // Buttons are disabled when the user wants to decrease below 0 or over 98
-    function handleEnableDisable(itemId) {
+  function handleEnableDisable(itemId) {
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 98;

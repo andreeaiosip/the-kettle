@@ -128,6 +128,10 @@ html, body {
     margin: 0 auto;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 @media (max-width: 768px){
 	.navbar .navbar-right .dropdown-menu {
 		width: 100%;
