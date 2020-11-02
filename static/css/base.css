@@ -132,6 +132,23 @@ html, body {
 .remove-item {
     cursor: pointer;
 }
+
+.btn-info {
+    background-color: #c06e16 !important;
+    border-color: #d68029 !important;   
+}
+.btn-info>a {
+    color: #fafafa;
+}
+
+.btn-info>a:hover {
+text-decoration: none;
+font-weight: 600;
+}
+
+
+
+
 @media (max-width: 768px){
 	.navbar .navbar-right .dropdown-menu {
 		width: 100%;
