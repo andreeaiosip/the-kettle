@@ -22,11 +22,11 @@ class OrderAdmin(admin.ModelAdmin):
         'first_name',
         'last_name',
         'email',
-        'phone_number',
-        'country',
-        'town_or_city',
         'street_address1',
         'street_address2',
+        'town_or_city',
+        'country',
+        'phone_number',
         'order_total',
         )
 
