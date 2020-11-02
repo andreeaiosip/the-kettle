@@ -21,3 +21,7 @@
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
+
+.page-header {
+    padding-top: 55px;
+}
