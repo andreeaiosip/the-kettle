@@ -69,8 +69,7 @@
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-                        {{ order_form.first_name | as_crispy_field }}
-                        {{ order_form.last_name | as_crispy_field }}
+                        {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
@@ -93,8 +92,12 @@
 							{% endif %}
 						</div>
                     </fieldset>
+
+
                     <fieldset class="px-3">
+
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                         <input type="hidden" value="{{ client_secret }}" name="client_secret" />
                         <!-- Stripe element -->
                         <div class="mb-3" id="card-element"></div>
 
