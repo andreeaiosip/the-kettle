@@ -17,7 +17,7 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'bag': json.dumps(request.session.get('bag', {})),
+            'basket': json.dumps(request.session.get('basket', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -34,10 +34,9 @@ def checkout(request):
 
     if request.method == "POST":
         basket = request.session.get("basket", {})
-
+        print(basket)
         form_data = {
-            "first_name": request.POST["first_name"],
-            "last_name": request.POST["last_name"],
+            "full_name": request.POST["full_name"],
             "email": request.POST["email"],
             "phone_number": request.POST["phone_number"],
             "street_address1": request.POST["street_address1"],
@@ -47,7 +46,14 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            print(form_data)
+            order = order_form.save(commit=False)
+            print(order)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_basket = json.dumps(basket)
+            print(order.original_basket)
+            order.save()
             for item_id, item_data in basket.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -69,6 +75,7 @@ def checkout(request):
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
+            print(order_form)
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
@@ -100,7 +107,6 @@ def checkout(request):
     }
 
     return render(request, template, context)
-
 
 
 def checkout_success(request, order_number):
