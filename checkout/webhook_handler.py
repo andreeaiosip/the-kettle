@@ -4,6 +4,7 @@ from django.template.loader import render_to_string
 from django.conf import settings
 from .models import Order, OrderLineItem
 from products.models import Product
+from profiles.models import UserProfile
 
 import json
 import time
@@ -33,8 +34,25 @@ class StripeWH_Handler:
         save_info = intent.metadata.save_info
 
         billing_details = intent.charges.data[0].billing_details
-     
         order_total = round(intent.charges.data[0].amount / 100, 2)
+
+        # Clean data in the shipping details
+        for field, value in billing_details.address.items():
+            if value == "":
+                billing_details.address[field] = None
+
+        # Update profile information if save_info was checked
+        profile = None
+        username = intent.metadata.username
+        if username != 'AnonymousUser':
+            profile = UserProfile.objects.get(user__username=username)
+            if save_info:
+                profile.default_street_address1 = billing_details.address.line1
+                profile.default_street_address2 = billing_details.address.line2
+                profile.default_town_or_city = billing_details.address.city
+                profile.default_country = billing_details.address.country
+                profile.default_phone_number = billing_details.phone
+                profile.save()
 
         order_exists = False
         attempt = 1
@@ -67,6 +85,7 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.create(
                     full_name=billing_details.full_name,
+                    user_profile=profile,
                     phone_number=billing_details.phone,
                     country=billing_details.address.country,
                     town_or_city=billing_details.address.city,
