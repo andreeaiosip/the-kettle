@@ -1,0 +1,14 @@
+Hi {{ order.full_name }}!
+
+This is a confirmation of your order at The Kettle Shop. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: ${{ order.order_total }}
+
+
+Thank you for your order!
+See you soon!
+
+The Team @ The Kettle Shop
