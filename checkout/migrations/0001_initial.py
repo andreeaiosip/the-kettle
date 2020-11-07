@@ -28,8 +28,6 @@ class Migration(migrations.Migration):
                 ('phone_number', models.CharField(max_length=20)),
                 ('date', models.DateTimeField(auto_now_add=True)),
                 ('order_total', models.DecimalField(decimal_places=2, default=0, max_digits=10)),
-                ('original_basket', models.TextField(default='')),
-                ('stripe_pid', models.CharField(default='', max_length=254)),
             ],
         ),
         migrations.CreateModel(

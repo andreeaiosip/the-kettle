@@ -35,6 +35,7 @@ def checkout(request):
     if request.method == "POST":
         basket = request.session.get("basket", {})
         print(basket)
+        print("basket")
         form_data = {
             "full_name": request.POST["full_name"],
             "email": request.POST["email"],
@@ -46,13 +47,11 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            print(form_data)
             order = order_form.save(commit=False)
             print(order)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
-            print(order.original_basket)
             order.save()
             for item_id, item_data in basket.items():
                 try:
@@ -95,10 +94,12 @@ def checkout(request):
 
         order_form = OrderForm()
 
+    
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
-
+    print(intent.currency)
+    print(intent.amount)
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
