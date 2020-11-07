@@ -14,6 +14,8 @@ class OrderAdmin(admin.ModelAdmin):
         'order_number',
         'date',
         'order_total',
+        'original_basket',
+        'stripe_pid',
         )
 
     fields = (
@@ -27,6 +29,8 @@ class OrderAdmin(admin.ModelAdmin):
         'country',
         'phone_number',
         'order_total',
+        'original_basket',
+        'stripe_pid',
         )
 
     list_display = (
