@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
+from .forms import ProductForm
 
 # Create your views here.
 
@@ -50,3 +51,14 @@ def product_view(request, product_id):
     }
 
     return render(request, 'products/product_view.html', context)
+
+
+def add_product(request):
+    """ Add a product in the stock """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
