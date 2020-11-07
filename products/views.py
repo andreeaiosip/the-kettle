@@ -54,8 +54,15 @@ def product_view(request, product_id):
 
 
 def add_product(request):
-    """ Add a product in the stock """
-    form = ProductForm()
+    """ Add a product to shop """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('add_product'))
+    else:
+        form = ProductForm()
+
     template = 'products/add_product.html'
     context = {
         'form': form,
