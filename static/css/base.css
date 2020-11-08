@@ -134,11 +134,11 @@ html, body {
 }
 
 .btn-info {
-    background-color: #c06e16 !important;
-    border-color: #d68029 !important;   
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;   
 }
 .btn-info>a {
-    color: #fafafa;
+    color: #070000;
 }
 
 .btn-info>a:hover {
