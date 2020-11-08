@@ -77,6 +77,13 @@ I have sourced images of the internet with license free. I wanted to use some im
 
 I have chose to use clean background with off white #fffff and the brownish colour #c48968 to add a bit of colour and reflect the theme of the website.
 
+### Wireframes
+
+[Balsamiq Wireframes](https://balsamiq.com/) tool was used to create all wireframes for the project.
+
+Original wireframes for desktop, tablet and mobile can be found [here](https://github.com/andreeaiosip/the-kettle/tree/master/wireframes). The website was changed and evolved through the development process . The wireframes served as guidelines to keep in mind what kind of layout I want to have at the end.
+
+
 ### Technologies Used
 
 The languages, frameworks, libraries and other tools utilised for building this web-app are:
