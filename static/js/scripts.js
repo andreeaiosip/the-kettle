@@ -1,3 +1,4 @@
+// Navbar toggle function 
 $(document).ready(function(){
 	var dropdown = $(".search-dropdown");
 	var toogleBtn = $(".search-dropdown .dropdown-toggle");

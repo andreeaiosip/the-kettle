@@ -42,6 +42,7 @@
           <div class="dropdown-menu">	
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
+                 <!-- Only admin can see Product Management link -->
                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                 {% endif %}
                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
@@ -54,6 +55,7 @@
         </div>
       </a>
       <div>
+       <!-- Shopping basket -->
         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'basket' %}">
           <i class="fa fa-shopping-bag"></i>
           <p class="my-0">
