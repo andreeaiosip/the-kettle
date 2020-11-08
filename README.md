@@ -149,3 +149,17 @@ The languages, frameworks, libraries and other tools utilised for building this 
 - I set the SECRET_KEY in settings.py to get it from the environment
 - Debug is set to false when not in development environment
 
+### Testing
+
+During development of this project, I tested each function thoroughly for the expected outcome, to make sure everything is working as expected before each commit.
+
+I performed all the manual tests below once my website was in a production environment and I felt was ready for submission.
+
+Due to the time constraints, I could make a log of all the tests I have made.
+
+**Important bugs** I have encountered that made me to reset my database, but was actually not necessary. Is because I've never used Stripe before , I didn't know that Stripe has uses for the card variable *name*, so I was using my own variable  *full_name* instead. It threw many errors and I have spent lots of time figuring out this issue.
+
+
+
+
+
