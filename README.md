@@ -160,6 +160,18 @@ Due to the time constraints, I could make a log of all the tests I have made.
 **Important bugs** I have encountered that made me to reset my database, but was actually not necessary. Is because I've never used Stripe before , I didn't know that Stripe has uses for the card variable *name*, so I was using my own variable  *full_name* instead. It threw many errors and I have spent lots of time figuring out this issue.
 
 
+### Credits
+
+The images was taken of Unsplashed and text was taken of wikipedia and online blogs. 
+Readme.md file was created with the help of inspiration of a few of my colleagues.
+
+**Acknowledgements**
+
+During this development I took a heavy amount of inspiration and guidance from the mini project featured in the learning material to learn about how to make production ready Django project, the planning and development were all aided by this project, the creator of the project is [ckz8780 Chris Z](https://github.com/ckz8780), a link to the project he made for Code Institute, [Botique Ado](https://github.com/ckz8780/boutique_ado_v1).
+
+Thank you to Code Institute Tutors for their invaluable support during development.
+Thank you to my mentor [Simen Daehlin](https://github.com/Eventyret) for his help and support!
+
 
 
 
