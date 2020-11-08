@@ -1,14 +1,53 @@
 {% extends "base.html" %}
 {% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'articles/css/articles.css' %}">
+{% endblock %}
+
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Blog</h2>
-                <hr class="w-50 mb-1">
-            </div>
-        </div>
+    
+<div class="overlay"></div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col text-center mt-3">
+			<h2 class="blog-title">Blog</h2>
+			<hr class="w-50 mb-1">
+		</div>
+	</div>
+    <hr >
+    <div class="row">
+        {% for article in articles %}
+            <div class="col-md-12 col-lg-6">
+				<div >
+					<h5>{{ article.name }}</h5>
+					<p class="text-muted">Published: {{ article.pub_date }}</p>
+				</div>
+                <div class="row">
+                    <p >{{ article.body }}</p>
+                </div>
+			</div>
+                {% if forloop.counter|divisibleby:1 %}     
+                    <div class="col-12 d-sm-none mb-5">
+                        <hr >
+                    </div>
+                {% endif %}                        
+                {% if forloop.counter|divisibleby:2 %}
+                    <div class="col-md-6 d-none  mb-5">
+                        <hr >
+                    </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                    <div class="col-md-6 d-none mb-5">
+                        <hr >
+                    </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                    <div class="col-12 d-none col-lg-6 mb-5">
+                        <hr >
+                    </div>
+                {% endif %}
+            {% endfor %}
     </div>
+</div>
 {% endblock %}

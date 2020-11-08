@@ -7,6 +7,6 @@ from .models import Article
 
 def articles(request):
     """ Display all articles """
-    articles = Article.all().order_by('pub_date')
+    articles = Article.objects.all().order_by('pub_date')
     return render(request, 'articles/articles.html', {'articles': articles})
 
