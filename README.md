@@ -11,7 +11,7 @@
 - Sell products at a lower price than the brick and mortar shops.
 - Ship the products around the world to reach a wide audience.
 
-**USER EXPERIENCE**
+### **USER EXPERIENCE**
 
 #### Target audience:
 
@@ -60,6 +60,22 @@ I want to be to buy good quality coffee and tea to be able to prepare it at home
 - As administrator, I want to be able to log in into the backend of the site.
 - As administrator, I want to be able to add, edit and delete products
 - As administrator, I would like to be able to see all the orders that were placed on the site.
+
+### Design Choices: 
+
+I wanted to the site look clean, but with some earthy colours to represent the tea and coffee colours, so I have used 
+
+#### Fonts:
+
+I chose to use Open Sans and Roboto as the main font family for this website as it provides clean style for text and titles. In the essence of keeping the layout clean, but with a sense of calmness and inviting.
+
+#### Images:
+
+I have sourced images of the internet with license free. I wanted to use some images with pack of coffee and tea, but most of them were with licence.
+
+#### Colours:
+
+I have chose to use clean background with off white #fffff and the brownish colour #c48968 to add a bit of colour and reflect the theme of the website.
 
 ### Technologies Used
 
