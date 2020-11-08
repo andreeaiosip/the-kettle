@@ -66,10 +66,10 @@ html, body {
 	min-height: 38px;
 	border-radius: 2px;
 }
-.input-group-append .btn, .input-group-append .btn:active {
+/* .input-group-append .btn, .input-group-append .btn:active {
 	border-color: #c77838;
 	background: #c77838 !important;
-}
+} */
 .navbar .nav-item i {
 	font-size: 18px;
 	line-height: 16px;
@@ -91,6 +91,10 @@ html, body {
 	left: auto;
 	right: 0;
 	font-size: 14px;
+}
+
+.page-title {
+    padding-top: 50px;
 }
    .coffee-container { 
     margin: auto;
@@ -134,11 +138,11 @@ html, body {
 }
 
 .btn-info {
-    background-color: #ffffff !important;
-    border-color: #ffffff !important;   
+    background-color: #fcfcfc !important;
+    border-color: #022515 !important;   
 }
 .btn-info>a {
-    color: #070000;
+    color: #032b12;
 }
 
 .btn-info>a:hover {
