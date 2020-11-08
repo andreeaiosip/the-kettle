@@ -1,4 +1,3 @@
-  
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -25,10 +24,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                        request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                        description__icontains=query)
             products = products.filter(queries)
 
     context = {
@@ -81,7 +82,6 @@ def add_product(request):
 def edit_product(request, product_id):
     """ Edit products' details """
     if not request.user.is_superuser:
-    
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
