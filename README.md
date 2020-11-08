@@ -115,5 +115,37 @@ The languages, frameworks, libraries and other tools utilised for building this 
 -  **Stripe -** Checkout creates a secure, Stripe-hosted payment page that lets you collect payments quickly. It works across devices and is designed to increase conversion. Checkout makes it easy to build a first-class payments experience. https://stripe.com/docs/payments/checkout
 -  **Whitenoise –** for saving the static files to render in the live app on Heroku.
 
+### Deployment
 
+**I developed the project with the online IDE Gitpod, I used GitHub for version control, and Heroku for hosting the deployed site**
+
+**Connecting to GitHub**
+
+- I logged into Github, and created a repository, named the-kettle.
+- I have connected to Gitpod by clicking the green button beside the repo in Github
+- Now I am connected to the repo, any small or major changes can be pushed to adhere to good version control.
+
+**Creation of app in heroku, and connection**
+
+- Log in to Heroku (account is required), within the dashboard, click the "new" button featured in the top right of the page.
+- Pick the closest region to you
+- Using the CLI, add the heroku app as the remote master branch | `heroku git: remote a [app name]`
+
+**Deployment to heroku**
+
+- In the created Heroku app, I installed Heroku Postgres (Free Plan) as an add-on in the Resources tab
+- To use Postgres, I installed two packages in my project, dj_database_url and psycopg2 and added them to my requirements
+- In the Heroku app, I set Config Vars, so any secret information was kept out of version control, the django secret key has been changed from the one that was exposed.
+- In the settings.py file, I imported dj_database_url, and set it to be used in production environment
+- I used loaddata to import the data from my fixture files into the data models used in production
+- I created a superuser for use in production via the command line
+- I installed gunicorn, for use as the web server, added it to requirements.txt
+- Created a Procfile
+- The deployed sites hostname was added to "ALLOWED_HOSTS"
+- Before pushing to heroku, DISABLE_COLLECTSTATIC was set to 1, to stop static files being collected during deployment
+- Before pushing to Heroku, I pushed my commits to Github
+- I then procceded to push to heroku
+- After the successful deploy set up Heroku to automatically deploy whenever I push the my project on github.
+- I set the SECRET_KEY in settings.py to get it from the environment
+- Debug is set to false when not in development environment
 
