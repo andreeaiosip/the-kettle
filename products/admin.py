@@ -22,10 +22,10 @@ class ProductAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-    )
+                     )
 
     ordering = ('name',
-    )
+                )
 
 
 # Flavour Model
@@ -36,7 +36,7 @@ class FlavourAdmin(admin.ModelAdmin):
     )
 
     ordering = ('name',
-    )
+                )
 
 
 admin.site.register(Product, ProductAdmin)

@@ -75,7 +75,8 @@ def checkout(request):
                     return redirect(reverse('basket'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
         else:
             print(order_form)
             messages.error(request, 'There was an error with your form. \
@@ -83,7 +84,8 @@ def checkout(request):
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, "There's nothing in your basket at the moment")
+            messages.error(
+                request, "There's nothing in your basket at the moment")
             return redirect(reverse('products'))
 
         current_basket = basket_contents(request)
@@ -94,7 +96,7 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-         # If the user is authenticated prefill the form with their details.
+        # If the user is authenticated prefill the form with their details.
 
         if request.user.is_authenticated:
             try:
