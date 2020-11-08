@@ -15,5 +15,5 @@ class Article(models.Model):
         return self.name
 
     def snippet(self):
-        return self.body[:250]
+        return self.body[:250] + '...'
 
