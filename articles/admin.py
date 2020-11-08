@@ -11,6 +11,8 @@ class ArticleAdmin(admin.ModelAdmin):
         'name',
         'pub_date',
         'body',
+        'image',
+
     )
 
     ordering = ('pub_date',)
